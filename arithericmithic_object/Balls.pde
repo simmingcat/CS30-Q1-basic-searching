@@ -11,4 +11,21 @@ class Ball {
     myBall.x += myBall.xSpeed;
     myBall.y += myBall.ySpeed;
   }
+  
+  void bounce (){
+    if (x - diameter*1/2 < 0 || x + diameter*1/2 > 500) {
+    xSpeed *= -1;
+  }
+
+  if (y - diameter*1/2 < 0 || myBall.y + myBall.diameter*1/2 > 300) {
+    myBall.ySpeed *= -1;
+  }
+
+ 
+  }
+  
+  void draw(){
+     fill(colour);
+  ellipse(x, y, diameter, diameter);
+  }
 }

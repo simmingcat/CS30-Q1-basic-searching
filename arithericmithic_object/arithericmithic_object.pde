@@ -13,16 +13,8 @@ void setup() {
 void draw() {
   background(0);
   myBall.step();
-  if (myBall.x - myBall.diameter*1/2 < width*0 || myBall.x + myBall.diameter*1/2 > width) {
-    myBall.xSpeed *= -1;
-  }
-
-  if (myBall.y - myBall.diameter*1/2 < height*0 || myBall.y + myBall.diameter*1/2 > height) {
-    myBall.ySpeed *= -1;
-  }
-
-  fill(myBall.colour);
-  ellipse(myBall.x, myBall.y, myBall.diameter, myBall.diameter);
+  myBall.bounce();
+  myBall.draw();
 }
 
 void keyPressed() {
