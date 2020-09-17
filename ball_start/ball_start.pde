@@ -9,13 +9,14 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-    fill(colour);
-    ellipse(x, y, diameter, diameter);
+  Ball.draw();
+ 
 }
 
 void keyPressed() {
 }
 
 void mousePressed() {
+  mouseX
+  mouseY
 }
