@@ -4,8 +4,8 @@ class Ball {
   float diameter = 20;
   color colour = color(255, 137, 178);
 
-  float xSpeed = 1;
-  float ySpeed = 1;
+  float xSpeed = 5;
+  float ySpeed = 5;
 
   void step() {
     myBall.x += myBall.xSpeed;
@@ -17,11 +17,9 @@ class Ball {
     xSpeed *= -1;
   }
 
-  if (y - diameter*1/2 < 0 || myBall.y + myBall.diameter*1/2 > 300) {
+  if (y - diameter*1/2 < 0 || y + diameter*1/2 > 300) {
     myBall.ySpeed *= -1;
-  }
-
- 
+  } 
   }
   
   void draw(){
