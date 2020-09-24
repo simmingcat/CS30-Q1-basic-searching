@@ -7,6 +7,7 @@ pfont
 */
 
 void setup(){
+    size(500, 300);
   /*
   Landscape vs. portrait
   Splash Screen with Start Button, reset , play , etc.
@@ -17,6 +18,7 @@ void setup(){
 }
 
 void draw(){
+
   /*
   Game Start
    Background

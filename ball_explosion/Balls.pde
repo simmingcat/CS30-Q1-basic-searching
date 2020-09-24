@@ -21,6 +21,9 @@ class Ball {
     if(y - diameter < 0 || y + diameter > height){
     diameter = diameter + 0.5 ;
   }
+  if(diameter > 100){
+     diameter = 100;
+   }
   //150
   
   println(diameter);
