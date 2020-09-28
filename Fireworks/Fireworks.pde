@@ -12,13 +12,13 @@ void setup(){
 void draw(){
   background(255);
   myFirework.draw();
-  yourFirework.draw();
+//  yourFirework.draw();
   
   myFirework .step();
-  yourFirework .step();
+//  yourFirework .step();
   
   myFirework .bounce ();
-  yourFirework .bounce ();
+ // yourFirework .bounce ();
   
   
   

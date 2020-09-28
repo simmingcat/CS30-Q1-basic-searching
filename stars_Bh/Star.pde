@@ -12,11 +12,13 @@ class Star {
    this. X = XP;
    this. Y = YP;
    this. Diameter = DiameterP;
+     this. xS = random (-5, 3);
+    this. yS = random (-5, 3);
    
    
   }//Constructor
   
- 
+  
 
   
   void draw(){

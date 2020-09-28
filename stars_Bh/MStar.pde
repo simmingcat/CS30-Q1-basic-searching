@@ -11,3 +11,7 @@ void CStar(){
  }
  
 }
+
+void step(){
+   
+  }

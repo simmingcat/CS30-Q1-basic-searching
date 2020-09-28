@@ -12,9 +12,11 @@ class Star {
    
    
   }//Constructor
-  
- 
-
+  void step(){
+    if(mouseX = width && mouseY = height){
+      
+    }
+  }
   
   void draw(){
    background(0);

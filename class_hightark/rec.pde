@@ -1,4 +1,4 @@
-class Rect extends Shape {
+public class Rect extends Shape {
   color colour;
   
   Rect(float x, float y, float w, float h, color c){
@@ -9,7 +9,7 @@ class Rect extends Shape {
   
   void draw(){
     fill(colour);
-    rect();
+    rect(x, y, w, h);
   }
   
 }
