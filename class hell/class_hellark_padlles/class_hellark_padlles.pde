@@ -1,32 +1,35 @@
 //global variables
 public ArrayList <Shape> shapes = new ArrayList <Shape>();
 Circle cHex;
+Rect rHex;
 
 void setup(){
   fullScreen();
   //size(500, 300);
- // Rect rHex = new Rect (width*1/4, height*1/4, width*2/4, height*2/4, #FFA2A2);
- // Rect rRGB = new Rect (width*3/5, height*3/5, width*3/5, height*1/5, color(random(255),random(255), random(255)));
-  cHex = new Circle(width*1/2, height*1/2, width*1/16, width*1/16, #90FFF7);
+  Rect rHex = new Rect (width*1/16, height*3/8, width*1/32, height*1/3, #FFA2A2);
+  Rect rRGB = new Rect (width*29/32, height*3/8, width*1/32, height*1/3, color(144, 255, 247));
+  cHex = new Circle(width*1/2, height*1/2, width*1/16, width*1/16, #FFFFFF);
   
   shapes.add(cHex);
- // shapes.add(rHex);
-//  shapes .add(rRGB);
+  shapes.add(rHex);
+  shapes .add(rRGB);
 }
 
 void draw(){
   background(0);
+  /*
   cHex.draw();
-   cHex.step();
-   cHex.bounce();
-   /*
+  cHex.step();
+  cHex.bounce();
+   */
+   
   for(int i=0; i < shapes.size(); i++){
-  shapes.get(i).draw();
-  
+  shapes.get(i).draw();  
   }
   cHex.step();
+  cHex. bounce();
   shapes.get(2).draw();
-  */
+  
 }
 
 public abstract class Shape{
@@ -51,6 +54,6 @@ public abstract class Shape{
 }
 
 public void keyPressed(){
-  
+ rHex. keyPressed();
   
 }

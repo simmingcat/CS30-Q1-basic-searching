@@ -11,6 +11,8 @@ public class Circle extends Shape{
     
   }
  void bounce (){
+   
+   
     if (x - w *1/2 < 0 || x + w *1/2 > width) {
     xSpeed *= -1;
   }

@@ -3,6 +3,7 @@ public class Circle extends Shape{
   Circle(float x,float y,float w,float h, color c){
     super(x, y, w, h);
     this. colour = c;
+
   }
   
   void step(){
