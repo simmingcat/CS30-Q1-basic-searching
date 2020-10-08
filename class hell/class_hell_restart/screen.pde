@@ -1,7 +1,7 @@
 public class screen extends Shape {
   //public int gameScreen = 0;
   color colour;
-  String WTBP = "Welcome to broken pong";
+  String WTP = "Welcome to pong";
   String CTS = "Click To Start";
 
   screen(float x, float y, float w, float h, color c) {
@@ -9,27 +9,20 @@ public class screen extends Shape {
     this. colour = c ;
   }
 
-void Gscreen() {
-  if (gameScreen == 0) {
-    initScreen();
-  } else if (gameScreen == 1) {
-    startGame();
-  }
-}
 
   void initScreen() {
     background (0);
     fill(colour);
     textSize(50);
     textAlign(CENTER, CENTER);
-    text(WTBP, x, y, w, h);
+    text(WTP, 0, 0, 1366, 768);
     //0, 0, 1366, 768
-/*
+
     textSize(20);
     textAlign(CENTER, CENTER);
-    text(CTS, x, y, w, h);
+    text(CTS, width*1/3, height*1/2, width*1/3, 100);
    // width*1/3, height*1/2, width*1/3, 100
-   */
+   
   }
   
   void gameScreen() {
@@ -52,7 +45,10 @@ void Gscreen() {
   ScoreB. redscore();
   
 }
-
+void startGame() {
+   gameScreen = 1;
+  //gameScreen = 2;
+}
   
   void mousePressed() {
   if (gameScreen==0) {

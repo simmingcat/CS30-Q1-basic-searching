@@ -1,10 +1,14 @@
 public ArrayList <Shape> shapes = new ArrayList <Shape>();
 public int gameScreen = 0;
+
+gameOver GameO;
 game gHex;
 paddle1 pHex1;
 paddle2 pHex2;
 score ScoreB;
 screen ScreenS;
+restart Re;
+
 
 
 void setup() {
@@ -14,8 +18,12 @@ void setup() {
   pHex1 = new paddle1 (width*1/16, height*3/8, width*1/32, height*1/3, #ADFDFF);
   pHex2 = new paddle2 (width*15/16, height*3/8, width*1/32, height*1/3, #FFA2A2);
   gHex = new game(width*1/2, height*1/2, width*1/16, width*1/16, #FFFFFF);
-  ScreenS = new screen(width*0 ,height*0 ,width, height, #FFFFFF);
-
+  GameO = new gameOver (width*0, height*0, width*1366, height*768, #FFFFFF );
+  ScreenS = new screen (width*0, height*0, width*1366, height*768, #FFFFFF);
+  Re = new restart (width*0, height*0, width*1366, height*768, #FFFFFF);
+   
+  shapes. add(Re);
+  shapes. add(GameO);
   shapes. add(ScreenS);
   shapes. add(ScoreB);
   shapes.add(gHex);
@@ -27,26 +35,27 @@ void draw() {
   //ScreenS. startGame();
   if (gameScreen == 0) {
     ScreenS. initScreen();
-  } else if (gameScreen == 1) {
+    
+  }else if (gameScreen == 1) {
     ScreenS. gameScreen();
+    
+  }else if (gameScreen == 2) {
+    GameO. gameOverBlue();
+    GameO. gameOverRed();
   }
   
-  /*
+ /*
   background(0);
   gameScreen();
 println(width, height);
 */
 }
 
-void startGame() {
-   gameScreen = 1;
-  //gameScreen = 2;
-}
-
 
 void keyPressed() {
   pHex1. keyPressed();
   pHex2. keyPressed();
+  Re. keyPressed();
 }
 
 void mousePressed(){
@@ -71,4 +80,5 @@ public abstract class Shape {
     this. ySpeed = 5;
   }
   
+ 
 }
