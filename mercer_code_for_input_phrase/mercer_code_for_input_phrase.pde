@@ -3,9 +3,9 @@
 
 void setup() {
   size(500, 400);
-  BS. setup();
 }
 
 void draw() {
+
   
-}
+}//End draw()
